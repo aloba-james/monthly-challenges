@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block page_title %} {{challengeMonth|title}}
+Challenge {% endblock %} 
+{% block content %}
+<header>
+  <nav>
+    <a href="">All Challenges</a>
+  </nav>
+</header>
+
+
+<h1>{{challengeMonth|title}} Challenge</h1>
+{% if text is not None %}
+<h2>{{ text }}</h2>
+{% else %}
+<p>There is no task for this month</p>
+{% endif %} {% endblock %}
